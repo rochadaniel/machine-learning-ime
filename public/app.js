@@ -166,7 +166,7 @@ app.factory('quizFactory', function() {
        "Reinvestiria parte desse rendimento",
        "Reinvestiria todo esse rendimento"],
       answer: 0
-    }
+    },
     {
       question: "Qual a importância da performance diária dos seus investimentos?",
       options: ["Fundamental para a manutenção do padrão de vida",
