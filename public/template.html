@@ -1,0 +1,58 @@
+<div class="quiz-area" ng-show="inProgress">
+	<div ng-show="!quizOver" class="row">
+		<div class="col-sm-16">
+			{{questionNumber}}
+		</div>
+		<div class="col-sm-16">
+			<h4 id="question">{{question}}</h4>
+		</div>
+
+		<ul id="options" class="col-sm-16">
+			<li ng-repeat="option in options">
+				<div class="radio">
+					<label>
+						<input type="radio" name="answer" value="{{option}}">
+						{{option}}
+					</label>
+				</div>
+			</li>
+		</ul>
+
+		<div class="col-sm-16">
+			<button ng-click="nextQuestion()" class="btn btn-default">Próxima</button>
+		</div>
+	</div>
+
+	<div ng-show="quizOver" class="row">
+
+		<h2 ng-show="!quizCompleted">Buscando...</h2>
+		<div ng-show="quizCompleted" class="col-sm-16">
+			<h2>Obrigado pelas respostas. De acordo com o nosso algoritmo, seu perfil de investidor é:
+			<br/><b>Decision Tree: {{decisionTreeResponse}}</b>
+			<br/><b>Bayesian: {{bayesianResponse}}</b>
+			<br/><b>Logistic Regression: {{logistic}}</b>
+			<br/>Para finalizar, escolha uma das opções abaixo e clique no botão "Enviar"</h2>
+			<div>
+				<ul id="investors" class="col-sm-16">
+					<li ng-repeat="investor in investors">
+						<div class="radio">
+							<label>
+								<input type="radio" name="investorType" value="{{investor}}">
+								{{investor}}
+							</label>
+						</div>
+					</li>
+				</ul>
+				<div class="col-sm-16">
+					<button ng-click="sendNewInvestorProfile()" type="button" class="btn btn-default">Enviar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="intro" ng-show="!inProgress">
+	<p>Descubra seu perfil de investidor</p>
+	<button id="startQuiz" ng-click="start()" type="button" class="btn btn-default">Começar o quiz</button>
+</div>

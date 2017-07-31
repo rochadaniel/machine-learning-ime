@@ -1,0 +1,19 @@
+{
+  "name": "ml-limdu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "drocha",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "limdu": "^0.9.3",
+    "nodemailer": "^4.0.1",
+    "nodemon": "^1.11.0"
+  }
+}
